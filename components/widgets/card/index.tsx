@@ -38,6 +38,7 @@ export const PostCard = ({
     <motion.div
       className="bg-white p-8 rounded-md shadow-md max-w-2xl mx-auto"
       style={{ boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)" }}
+      variants={containerVariants}
     >
       <motion.h1
         className="text-3xl font-bold capitalize text-gray-800 mb-4"
@@ -45,8 +46,12 @@ export const PostCard = ({
       >
         {post?.title}
       </motion.h1>
-      <p className="text-gray-700 font-bold">Description</p>
-      <p className="text-gray-700 capitalize">{post?.body}</p>
+      <motion.p className="text-gray-700 font-bold" variants={contentVarients}>
+        Description
+      </motion.p>
+      <motion.p className="text-gray-700 capitalize" variants={contentVarients}>
+        {post?.body}
+      </motion.p>
       <motion.h2 className="text-xl font-bold mt-8" variants={contentVarients}>
         Comments:
       </motion.h2>
