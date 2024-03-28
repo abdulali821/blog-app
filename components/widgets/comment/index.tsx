@@ -19,6 +19,9 @@ export const Comment = ({ comment }: { comment: Comment }) => {
         </motion.h3>
       </motion.div>
       <p className="text-gray-600 capitalize">{comment.body}</p>
+      <p className="text-gray-600 text-[12px] pt-2 text-end">
+        By {comment.email}
+      </p>
     </motion.div>
   );
 };
