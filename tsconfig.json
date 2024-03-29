@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/error.tsx", "provider/store.js", "app/api/auth/[...nextauth].ts", "hooks/useDebounce.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/error.tsx", "provider/store.js", "app/api/auth/[...nextauth].ts", "hooks/useDebounce.ts", "test/postcard.test.js"],
   "exclude": ["node_modules"]
 }

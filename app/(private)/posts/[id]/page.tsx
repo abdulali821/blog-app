@@ -1,6 +1,6 @@
 import NotFound from "@/app/not-found";
 import { getCommentsByPostId, getPostById } from "@/app/slices/api";
-import { BlogPostSkeleton, Error, PostPage } from "@/components";
+import { BlogPostSkeleton, PostPage } from "@/components";
 import { store } from "@/provider/store";
 import { Metadata } from "next";
 

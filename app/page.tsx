@@ -1,7 +1,7 @@
 "use client";
 
 import { useGetPostsQuery } from "@/app/slices/api";
-import { BlogCard, Error } from "@/components";
+import { BlogCard } from "@/components";
 import { BlogCardSkeleton } from "@/components";
 import { useDebounce } from "@/hooks/useDebounce";
 import { postsContainerVariants } from "@/lib/framer-varients";

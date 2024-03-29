@@ -16,10 +16,10 @@ export const BlogCard = ({ post }: { post: Post }) => {
         <motion.h2 className="text-xl font-bold text-gray-800 mb-2">
           {post.title.slice(0, 30) + "..."}
         </motion.h2>
-        <motion.p className="text-gray-700 line-clamp-3">
+        <motion.p data-testid="body" className="text-gray-700 line-clamp-3">
           {post.body.slice(0, 150) + "..."}
         </motion.p>
-        <Link href={`/posts/${post.id}`}>
+        <Link data-testid="button" href={`/posts/${post.id}`}>
           <Button title="Read More" />
         </Link>
       </motion.div>
@@ -55,9 +55,13 @@ export const PostCard = ({
       <motion.h2 className="text-xl font-bold mt-8" variants={contentVarients}>
         Comments:
       </motion.h2>
-      {comments?.map((comment) => (
-        <Comment comment={comment} key={comment.id} />
-      ))}
+      {comments ? (
+        comments?.map((comment) => (
+          <Comment comment={comment} key={comment.id} />
+        ))
+      ) : (
+        <motion.div className="text-center py-10">No Comments</motion.div>
+      )}
     </motion.div>
   );
 };

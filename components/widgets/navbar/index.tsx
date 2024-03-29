@@ -41,7 +41,7 @@ export const NavBar = () => {
                   className="rounded-full w-8 h-8 mr-2 object-cover cursor-pointer"
                   alt="User avatar"
                 />
-                <span className="text-sm font-medium">
+                <span data-testid="username" className="text-sm font-medium">
                   {session.user?.name}
                 </span>
               </motion.div>
